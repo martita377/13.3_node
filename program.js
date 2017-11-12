@@ -7,11 +7,11 @@ process.stdin.on('readable', function() {
         switch (instruction) {
             case '/lang':
                 process.stdout.write("Let's test language:\n");
-                console.log(process.env['LANG']);
+                console.log(process.env.lang);
                 break;
             case '/node':
                 process.stdout.write('Node version:\n')
-                console.log(process.versions['node']);
+                console.log(process.versions.node);
                 break;
             case '/exit':
                 process.stdout.write('Quitting app!\n');
